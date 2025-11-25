@@ -101,6 +101,7 @@ class TestUnixSocket:
             'stream': ('OK', None)}
 
     def test_fdscan(self, clamd_unix_socket):
+        # new changes
         with tempfile.NamedTemporaryFile('wb', prefix="python-clamd") as f:
             f.write(python_clamd.EICAR)
             f.flush()
