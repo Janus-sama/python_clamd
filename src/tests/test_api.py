@@ -106,7 +106,7 @@ class TestUnixSocket:
             f.write(python_clamd.EICAR)
             f.flush()
             os.fchmod(f.fileno(), (mine | other))
-            expected = {f.name: ('FOUND', 'Eicar-Test-Signature')}
+            expected = {f.name: ('FOUND', 'Win.Test.EICAR_HDB-1')}
 
             assert clamd_unix_socket.fdscan(f.name) == expected
 
